@@ -135,12 +135,16 @@ Frontend will run on `http://localhost:3000`
 ```
 text-sharing-app/
 ├── backend/
-│   ├── package-lock.json
+│   ├── node_modules/
+│   ├── .env                 # Environment variables (not in git)
+│   ├── .gitignore
 │   ├── db.js               # Database connection
 │   ├── server.js           # Express server and API routes
+│   ├── package-lock.json
 │   └── package.json
 │
 └── frontend/
+    ├── node_modules/
     ├── src/
     │   ├── components/
     │   │   ├── Login.jsx       # Login page
