@@ -101,6 +101,12 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
     }
   };
 
+  const handleCopyLink = (uuid) => {
+  const shareUrl = `${window.location.origin}/paste/${uuid}`;
+  navigator.clipboard.writeText(shareUrl);
+  alert('Link copied to clipboard!');
+  };
+
   return (
     <div className="min-vh-100 bg-light">
       {/* Header */}
@@ -113,7 +119,7 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
               onClick={toggleDarkMode}
               className="btn btn-outline-secondary btn-sm"
             >
-              {darkMode ? '☀️ Light' : '🌙 Dark'}
+              {darkMode ? '☀️' : '🌙'}
             </button>
             
             {user ? (
@@ -208,6 +214,12 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
                                 >
                                   View
                                 </Link>
+                                <button
+                                  onClick={() => handleCopyLink(paste.uuid)}
+                                  className="btn btn-sm btn-outline-success"
+                                >
+                                  Share
+                                </button>
                                 <button
                                   onClick={() => handleDelete(paste.uuid)}
                                   className="btn btn-sm btn-outline-danger"
