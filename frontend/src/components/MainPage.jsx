@@ -68,7 +68,7 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
 
       const shareUrl = `${window.location.origin}/paste/${data.uuid}`;
       setMessage(`Text shared! Link: ${shareUrl}`);
-      setContent('');
+      //setContent('');
 
       if (user) {
         fetchPastes();
@@ -242,5 +242,6 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
     </div>
   );
 }
+
 
 export default MainPage;
