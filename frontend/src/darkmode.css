@@ -81,7 +81,7 @@ html[data-theme="dark"] body {
 
 [data-theme="dark"] pre {
   background-color: #2b3035 !important;
-  color: #abb0b5 !important;
+  color: #e1e6ea !important;
   border-color: #495057 !important;
 }
 
@@ -109,7 +109,7 @@ html[data-theme="dark"] body {
 }
 
 [data-theme="dark"] .btn-outline-secondary {
-  color: #d7dee5 !important;
+  color: #ffffff !important;
   border-color: #6c757d !important;
 }
 
@@ -166,4 +166,27 @@ html[data-theme="dark"] body {
 [data-theme="dark"] h3,
 [data-theme="dark"] .card-title {
   color: #ffffff !important;  /* or any color you prefer */
+}
+[data-theme="dark"] .btn-success {
+  color: #fff !important;
+}
+
+/* Home button text color */
+[data-theme="dark"] .btn-primary {
+  color: #fff !important;
+}
+[data-theme="dark"] .btn-outline-secondary {
+  color: #6ea8fe !important;
+  border-color: #6ea8fe !important;
+}
+/* Light mode button styles */
+.btn-outline-secondary {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #fff !important;
 }
