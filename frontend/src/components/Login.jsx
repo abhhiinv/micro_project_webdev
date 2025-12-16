@@ -36,7 +36,7 @@ function Login({ onLogin, apiUrl, darkMode, toggleDarkMode }) {
   };
 
   return (
-    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light">
+    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-light position-relative">
       {/* Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
@@ -46,12 +46,38 @@ function Login({ onLogin, apiUrl, darkMode, toggleDarkMode }) {
         {darkMode ? '☀️ Light' : '🌙 Dark'}
       </button>
 
+      {/* Gradient App Name */}
+      <div className="position-absolute w-100 text-center" style={{ top: '10%' }}>
+        <h1
+          className="display-1 fw-bold mb-0"
+          style={{
+            background: 'linear-gradient(135deg, #264291ff 0%, #7c3aed 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            fontSize: '4.5rem',
+            letterSpacing: '2px'
+          }}
+        >
+          TEXT SHARE
+        </h1>
+        <p className="text-muted fs-5 mt-2 fw-semibold"
+          style={{
+            background: 'linear-gradient(135deg, #ffffffff 0%, #ffffffff 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            letterSpacing: '2px'
+          }}
+        >Share your text with the world</p>
+      </div>
+      {/* Login Card */}
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6 col-lg-4">
             <div className="card shadow-sm">
               <div className="card-body p-4">
-                <h1 className="card-title text-center mb-4">Login</h1>
+                <h2 className="card-title text-center mb-4">Login</h2>
                 <form onSubmit={handleSubmit}>
                   {error && (
                     <div className="alert alert-danger" role="alert">
@@ -78,8 +104,8 @@ function Login({ onLogin, apiUrl, darkMode, toggleDarkMode }) {
                       required
                     />
                   </div>
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn btn-primary w-100"
                     disabled={loading}
                   >

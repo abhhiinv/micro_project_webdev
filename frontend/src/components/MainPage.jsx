@@ -142,7 +142,7 @@ function MainPage({ user, token, onLogout, apiUrl, darkMode, toggleDarkMode }) {
           </div>
         </div>
       </nav>
-
+      
       {/* Main Content */}
       <div className="container py-5">
         <div className="row g-4">

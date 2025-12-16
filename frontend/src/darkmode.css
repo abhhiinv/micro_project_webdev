@@ -196,6 +196,7 @@ a:hover {
 .col,
 [class*="col-"] {
   background-color: transparent !important;
+  padding-top: 10px !important;
 }
 
 .min-vh-100 {
@@ -585,4 +586,11 @@ html[data-theme="dark"] body {
 [data-theme="dark"] .card .card {
   background: linear-gradient(145deg, rgba(55, 58, 70, 0.6) 0%, rgba(40, 45, 60, 0.6) 100%) !important;
   border: 1px solid rgba(139, 92, 246, 0.2) !important;
+}
+/* Gradient text in dark mode */
+[data-theme="dark"] .display-1 {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
